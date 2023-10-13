@@ -5,12 +5,11 @@
   <meta charset="utf-8" />
   <title>Hodophilers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
   <meta content="" name="author" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- App favicon -->
-  <link rel="shortcut icon" href="admin_assets/assets/images/favicon.ico">
+  <link rel="shortcut icon" href="admin_assets/assets/images/2106778703.jpg">
 
   <!-- App css -->
   <link href="admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

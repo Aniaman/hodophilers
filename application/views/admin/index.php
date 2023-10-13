@@ -8,8 +8,8 @@
           <div class="card">
             <div class="card-body p-0 auth-header-box">
               <div class="text-center p-3">
-                <a href="index.html" class="logo logo-admin">
-                  <img src="assets/images/logo-sm-dark.png" height="50" alt="logo" class="auth-logo">
+                <a href="<?= base_url('admin-login') ?>" class="logo logo-admin">
+                  <img src="<?= base_url('admin_assets/assets/images/2106778703.jpg') ?> " height="50" alt="logo" class="auth-logo">
                 </a>
                 <h4 class="mt-3 mb-1 fw-semibold text-white font-18">Let's Get Started Hodophillers</h4>
                 <p class="text-muted  mb-0">Sign in to continue to Hodophillers.</p>

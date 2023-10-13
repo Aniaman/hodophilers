@@ -1,22 +1,26 @@
 <!-- Left Sidenav -->
 <div class="left-sidenav">
   <!-- LOGO -->
-  <div class="brand">
-    <a href="index.html" class="logo">
-      <span>
-        <img src="<?= base_url(); ?>admin_assets/assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
-      </span>
-      <span>
-        <img src="<?= base_url(); ?>admin_assets/assets/images/logo.png" alt="logo-large" class="logo-lg logo-light">
-        <img src="<?= base_url(); ?>admin_assets/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
-      </span>
-    </a>
-  </div>
   <!--end logo-->
   <div class="menu-content h-100" data-simplebar>
     <ul class="metismenu left-sidenav-menu">
       <li>
         <a href="<?= base_url('admin-dashboard') ?>"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
+      </li>
+      <li>
+        <a href="javascript: void(0);"><i data-feather="tool" class="align-self-center menu-icon"></i>Website Setup <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+        <ul class="nav-second-level" aria-expanded="false">
+          <li><a href="<?= base_url('contact-setup') ?>"><i class="fas fa-address-book"></i>Contact Setup</a></li>
+          <li><a href="<?= base_url('slider-setup') ?>"><i class="fas fa-sliders-h"></i>Slider Setup</a></li>
+          <li><a href="<?= base_url('term-policy-setup') ?>"><i class="fas fa-file-contract"></i>Terms & Policy Setup</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript: void(0);"><i data-feather="map-pin" class="align-self-center menu-icon"></i>Package <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+        <ul class="nav-second-level" aria-expanded="false">
+          <li><a href="<?= base_url('destination-setup') ?>"><i class="fas fa-location-arrow"></i>Destination</a></li>
+          <li><a href="<?= base_url('term-policy-setup') ?>"><i class="fas fa-file-contract"></i>Terms & Policy Setup</a></li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -116,9 +120,9 @@
 
         <li class="dropdown">
           <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-            <span class="ms-1 nav-user-name hidden-sm"><?= isset($adminData) && $adminData['userName'] != "" ? $adminData['userName'] : "User"; ?></span>
+            <span class="ms-1 nav-user-name hidden-sm"><?= isset($this->session->userName) ? $this->session->userName : "User"; ?></span>
             <?php
-            $image = isset($adminData) && $adminData['profileImg'] != "" ? $adminData['profileImg'] : "user-5.jpg"
+            $image = isset($this->session->profileImg) != "" ? $this->session->profileImg : "user-5.jpg"
 
             ?>
             <img src="<?= base_url(); ?>admin_assets/assets/images/users/<?= $image; ?>" alt="profile-user" class="rounded-circle thumb-xs" />

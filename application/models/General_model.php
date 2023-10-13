@@ -216,12 +216,17 @@ class General_model extends CI_Model
 
 
 			$this->db->delete($tablename);
-
-			//echo $this->db->last_query(); die;
 			return TRUE;
 		} else {
 			return FALSE;
 		}
+	}
+	public function delete_all_table_data($tablename = '')
+	{
+		$this->db->empty_table($tablename);
+
+		//echo $this->db->last_query(); die;
+		return TRUE;
 	}
 
 	public function next_insertId($table)
