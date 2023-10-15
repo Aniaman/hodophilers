@@ -8,6 +8,9 @@ class Admin extends CI_Controller
 		parent::__construct();
 		$this->load->model('General_model', 'gm');
 		$this->load->library('session');
+		if ($this->session->admin_id == "") {
+			return redirect('Login');
+		}
 	}
 	public function dashboard()
 	{
