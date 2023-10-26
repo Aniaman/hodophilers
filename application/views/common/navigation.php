@@ -3,7 +3,7 @@
   <div class="top-header">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 d-none d-lg-block">
+        <div class="col-lg-9 d-none d-lg-block">
           <div class="header-contact-info">
             <ul>
               <li>
@@ -18,7 +18,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
+        <div class="col-lg-3 d-flex justify-content-lg-end justify-content-between">
           <div class="header-social social-links">
             <ul>
               <li><a href="<?= $contactDetails['facebookLink']; ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -44,14 +44,14 @@
         <nav id="navigation" class="navigation">
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <a href="<?= base_url(); ?>">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="<?= base_url('about-us') ?>">About</a>
 
             </li>
             <li>
-              <a href="#">Destination</a>
+              <a href="<?= base_url('destination') ?>">Destination</a>
 
             </li>
             <li>
@@ -59,7 +59,7 @@
 
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="<?= base_url('contact-us') ?>">Contact</a>
 
             </li>
             <li>
