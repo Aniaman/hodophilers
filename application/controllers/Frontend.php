@@ -17,4 +17,20 @@ class Frontend extends CI_Controller
 
     $this->load->frontend('index', $data);
   }
+  public function about()
+  {
+    $data['contactDetails'] = $this->gm->fetch_single_data('contactdetails', array());
+    $this->load->frontend('about', $data);
+  }
+  public function destination()
+  {
+    $data['contactDetails'] = $this->gm->fetch_single_data('contactdetails', array());
+    $data['destinationDetails'] = $this->gm->fetch_data('destinationdetails', array('status'=>1));
+    $this->load->frontend('destination', $data);
+  }
+  public function contact()
+  {
+    $data['contactDetails'] = $this->gm->fetch_single_data('contactdetails', array());
+    $this->load->frontend('contact', $data);
+  }
 }
