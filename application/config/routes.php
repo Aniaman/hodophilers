@@ -65,6 +65,10 @@ $route['destination-edit'] = 'admin/destinationEditAction';
 $route['slider-setup'] = 'admin/sliderSetup';
 $route['delete-slider/(:any)'] = 'admin/slidersDelete';
 $route['slider-edit'] = 'admin/sliderEditAction';
+$route['packages'] = 'admin/packages';
+$route['package-setup'] = 'admin/packagesAdd';
+$route['package-generate'] = 'admin/packageGenerate';
+//$route['packages-element'] = 'admin/packagesElements';
 
 //Frontend Routes
 

@@ -26,6 +26,7 @@
   <link href="<?= base_url(); ?>admin_assets/plugins/datatables/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
   <!-- Responsive datatable examples -->
   <link href="<?= base_url(); ?>admin_assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+  <link href="<?= base_url(); ?>admin_assets/plugins/timepicker/bootstrap-material-datetimepicker.css" rel="stylesheet">
 
 </head>
 

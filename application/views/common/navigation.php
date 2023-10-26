@@ -3,7 +3,7 @@
   <div class="top-header">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 d-none d-lg-block">
+        <div class="col-lg-9 d-none d-lg-block">
           <div class="header-contact-info">
             <ul>
               <li>
@@ -18,11 +18,11 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
+        <div class="col-lg-3 d-flex justify-content-lg-end justify-content-between">
           <div class="header-social social-links">
             <ul>
               <li><a href="<?= $contactDetails['facebookLink']; ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="<?= $contactDetails['twitterLink']; ?>"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <!-- <li><a href="<?= $contactDetails['twitterLink']; ?>"><i class="fab fa-twitter" aria-hidden="true"></i></a></li> -->
               <li><a href="<?= $contactDetails['instagramLink']; ?>"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
               <li><a href="<?= $contactDetails['linkedinLink']; ?>"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
               <li><a href="<?= $contactDetails['youtubeLink']; ?>"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>

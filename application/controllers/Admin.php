@@ -152,7 +152,8 @@ class Admin extends CI_Controller
 
 	public function destinationDelete()
 	{
-		$destinationId = $this->uri->segment(2);
+		$destinationId = urldecode(base64_decode($this->uri->segment(2)));
+
 		$delete = $this->gm->delete_data('destinationdetails', array('condition' => array('destinationId' => $destinationId)));
 		if (!empty($delete)) {
 
@@ -336,5 +337,104 @@ class Admin extends CI_Controller
 			$this->session->set_flashdata('failed', '<strong>Oh snap!</strong> 👎 Something went wrong. Please try again');
 			return redirect('slider-setup');
 		}
+	}
+	public function packages()
+	{
+		$this->load->template_admin('packages');
+	}
+	public function packagesAdd()
+	{
+		$destination  =  $this->gm->fetch_data('destinationdetails', array('status' => 1));
+		$this->load->template_admin('packageAdd', compact('destination'));
+	}
+	public function packagesElements()
+	{
+
+		$this->load->template_admin('packageElement');
+	}
+	public function packageGenerate()
+	{
+		$post = $this->input->post();
+		$configure = array(
+			array(
+				'field' => 'packageTitle',
+				'label' => 'Package Title',
+				'rules' => 'required'
+			),
+			array(
+				'field' => 'price',
+				'label' => 'Package Cost',
+				'rules' => 'required|numeric'
+			),
+			array(
+				'field' => 'discount',
+				'label' => 'Package Discount',
+				'rules' => 'required|numeric'
+			),
+		);
+		$this->form_validation->set_rules($configure);
+		if ($this->form_validation->run() == FALSE) {
+			return redirect('packages');
+		} else {
+			$fileName = str_replace("-", "_", $_FILES['packageMainImage']['name']);
+			// Add Main Image to $post
+			$config['upload_path'] = 'admin_assets/assets/images/packageMainImage';
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['file_name'] = $fileName;
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+			$this->upload->do_upload('packageMainImage');
+			$data = array('upload_data' => $this->upload->data());
+			$post['packageMainImage'] = $data['upload_data']['file_name'];
+
+
+			$name_array = array();
+			if (!empty($_FILES['packageGallery']['name'])) {
+				$filesCount = count($_FILES['packageGallery']['name']);
+				for ($i = 0; $i < $filesCount; $i++) {
+					$_FILES['imgs']['name'] = $_FILES['packageGallery']['name'][$i];
+					$_FILES['imgs']['type'] = $_FILES['packageGallery']['type'][$i];
+					$_FILES['imgs']['tmp_name'] = $_FILES['packageGallery']['tmp_name'][$i];
+					$_FILES['imgs']['error'] = $_FILES['packageGallery']['error'][$i];
+					$_FILES['imgs']['size'] = $_FILES['packageGallery']['size'][$i];
+					$uploadPath = 'admin_assets/assets/images/gallery';
+					$config['upload_path'] = $uploadPath;
+					$config['allowed_types'] = 'jpg|png|jpeg';
+					$config['max_size'] = 2048;
+					$config['max_width'] = 500;
+					$config['max_height'] = 500;
+
+					$this->load->library('upload', $config);
+					$this->upload->initialize($config);
+					if ($this->upload->do_upload('imgs')) {
+						$data = $this->upload->data();
+						$name_array[] = $data['file_name'];
+					}
+				}
+			}
+		}
+
+		echo "<pre>";
+		print_r($name_array);
+		print_r($post);
+		die;
+	}
+	public function fetchDestinationData()
+	{
+		$destination  =  $this->gm->fetch_data('destinationdetails', array('status' => 1));
+		if (!empty($destination) && sizeof($destination) > 0) {
+			foreach ($destination as $key => $value) {
+				$documentDetail['data'][] = array(
+					'destinationId' =>  $value['destinationId'],
+					'destinationName' => $value['destinationName'],
+					'packageName' => $value['packageName'],
+					'topDestination' => $value['topDestination'],
+					'images' => $value['images'],
+				);
+			}
+		} else {
+			$documentDetail['data'][] = null;
+		}
+		echo json_encode($documentDetail);
 	}
 }
