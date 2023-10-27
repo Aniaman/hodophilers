@@ -11,10 +11,10 @@
             <div class="textwidget widget-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </div>
-            <div class="award-img">
+            <!-- <div class="award-img">
               <a href="#"><img src="<?= base_url(); ?>assets/images/logo6.png" alt=""></a>
               <a href="#"><img src="<?= base_url(); ?>assets/images/logo2.png" alt=""></a>
-            </div>
+            </div> -->
           </aside>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -24,20 +24,17 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <ul>
                 <li>
-                  <a href="#">
+                  <a href="tel:<?= isset($contactDetails) && !empty($contactDetails['companyContact']) ?$contactDetails['companyContact'] :"" ?>">
                     <i class="fas fa-phone-alt"></i>
-                    +01 (977) 2599 12
+                    <?=  isset($contactDetails) && !empty($contactDetails['companyContact']) ? "( +91 ) " . $contactDetails['companyContact'] :"" ?>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class="fas fa-envelope"></i>
-                    <span class="__cf_email__" data-cfemail="89eae6e4f9e8e7f0c9ede6e4e8e0e7a7eae6e4">[email&#160;protected]</span>
-                  </a>
+                <a href="mailto:<?= isset($contactDetails) && !empty($contactDetails['companyEmail'])? $contactDetails['companyEmail']:""; ?>"><i class="fas fa-envelope"></i><?= isset($contactDetails) && !empty($contactDetails['companyEmail'])? $contactDetails['companyEmail']:""; ?> </a>
                 </li>
                 <li>
                   <i class="fas fa-map-marker-alt"></i>
-                  3146 Koontz, California
+                  <?= isset($contactDetails) && !empty($contactDetails['companyAddress'])? $contactDetails['companyAddress'] : ""; ?>
                 </li>
               </ul>
             </div>
@@ -111,11 +108,11 @@
         </div>
         <div class="col-md-2 text-center">
           <div class="footer-logo">
-            <a href="#"><img src="assets/images/travele-logo.png" alt=""></a>
+            <a href="<?= base_url(); ?>"><img class="white-logo" src="admin_assets/assets/images/<?= $contactDetails['companyLogo']; ?>" width ="80" height="80" alt="logo"></a>
           </div>
         </div>
         <div class="col-md-5">
-          <div class="copy-right text-right">Copyright © 2021 Travele. All rights reserveds</div>
+          <div class="copy-right text-right">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> Hodophilers. All rights reserveds</div>
         </div>
       </div>
     </div>

@@ -9,12 +9,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- App favicon -->
-  <link rel="shortcut icon" href="admin_assets/assets/images/2106778703.jpg">
+  <link rel="shortcut icon" href="<?= base_url() ?>admin_assets/assets/images/2106778703.jpg">
 
   <!-- App css -->
-  <link href="admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="admin_assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-  <link href="admin_assets/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  <link href="<?= base_url() ?>admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="<?= base_url() ?>admin_assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="<?= base_url() ?>admin_assets/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  <link href="<?= base_url() ?>admin_assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
 
 </head>
 

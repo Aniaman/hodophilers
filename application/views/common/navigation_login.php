@@ -63,10 +63,10 @@
 
             </li>
             <li>
-              <a href="#">Sign in</a>
+              <a href="<?= base_url('user-login') ?>">Sign in</a>
             </li>
             <li>
-              <a href="#">Sign up</a>
+              <a href="<?= base_url('user-sign-up') ?>">Sign up</a>
             </li>
           </ul>
         </nav>
