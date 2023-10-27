@@ -67,4 +67,20 @@ class MY_Loader extends CI_Loader
 			return $content;
 		}
 	}
+	public function template_user($view_page, $param = array(), $return_type = 1)
+	{
+		$content  = $this->ci->load->view('user/common/header.php', $param, TRUE);
+
+		$content  .= $this->ci->load->view('user/common/navigation.php', $param, TRUE);
+
+		$content .= $this->ci->load->view('user/' . $view_page, $param, TRUE);
+
+		$content  .= $this->ci->load->view('user/common/footer.php', $param, TRUE);
+
+		if ($return_type) {
+			echo $content;
+		} else {
+			return $content;
+		}
+	}
 }

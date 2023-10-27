@@ -49,6 +49,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+//Frontend Routes
 $route['default_controller'] = 'Frontend';
 $route['about-us'] = 'frontend/about';
 $route['destination'] = 'frontend/destination';
@@ -59,7 +61,7 @@ $route['admin-login'] = 'Login';
 $route['login'] = 'Login/loginAction';
 $route['forgot-password'] = 'Login/forgotPassword';
 $route['reset-password'] = 'Login/resetPassword';
-$route['admin-logout'] = 'Login/adminLogout';
+$route['logout'] = 'Login/adminLogout';
 $route['admin-dashboard'] = 'admin/dashboard';
 $route['contact-setup'] = 'admin/contactSetup';
 $route['term-policy-setup'] = 'admin/termPolicySetup';
@@ -70,7 +72,11 @@ $route['slider-setup'] = 'admin/sliderSetup';
 $route['delete-slider/(:any)'] = 'admin/slidersDelete';
 $route['slider-edit'] = 'admin/sliderEditAction';
 
-//Frontend Routes
+//Users Routes
+$route['user-login'] = 'Login/userLogin';
+$route['user-sign-up'] = 'Login/userRegister';
+$route['user-dashboard'] = 'User/dashboard';
+
 
 
 $route['404_override'] = '';
