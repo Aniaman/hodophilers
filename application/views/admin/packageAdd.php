@@ -134,10 +134,14 @@
             </select>
           </div>
         </div>
-        <div class="mb-3 row" id="tour-itinerary">
+        <div class="mb-3 row">
+
+          <label for="horizontalInput1" class="col-sm-3 form-label align-self-center mb-lg-0">Itinerary</label>
+          <div class="col-sm-6">
+            <select class="select2 mb-3 select2-multiple form-control" name="itineraryTitle[]" multiple data-placeholder="Select Multiple Itinerary" id="tour-itinerary">
+            </select>
+          </div>
         </div>
-
-
         <div id="product_attr_box">
           <div id="attr_1">
             <div class="row">
@@ -277,13 +281,12 @@
           console.log(response.data);
           if (response.data != "") {
             console.log(response);
-            let paymentTermData = '<label for="horizontalInput1" class="col-sm-3 form-label align-self-center mb-lg-0">Select Itinerary</label><div class="col-sm-6" ><select class="form-select" name="itineraryTitle"  aria-label="Default select example"><option selected>Select Itinerary</option>';
+            let paymentTermData = ``;
             response.data.map((e) => {
               paymentTermData = paymentTermData + `<option value="${e.itinerary_id}">${e.itineraryTitle}</option>
-              `;
-              console.log(paymentTermData);
+                `;
             });
-            paymentTermData = paymentTermData + `</select> </div><div class="col-sm-3"><button class=" btn btn-primary btn-md">View Details</button></div>`;
+            paymentTermData = paymentTermData + `<option value="test"> Test</option>`;
             $('#tour-itinerary').html(paymentTermData);
           }
         }

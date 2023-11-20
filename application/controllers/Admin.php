@@ -352,8 +352,6 @@ class Admin extends CI_Controller
 
 	public function packageGenerate()
 	{
-		//print_r($name_array);
-
 		$configure = array(
 			array(
 				'field' => 'packageTitle',
@@ -425,12 +423,11 @@ class Admin extends CI_Controller
 				'discount' => $post['discount'],
 				'popularDestination' => $post['popularDestination'],
 				'status' => $post['status'],
-				'itineraryTitle' => $post['itineraryTitle'],
+				'itineraryTitle' =>  implode(",", $post['itineraryTitle']),
 				'packageMainImage' => $post['packageMainImage'],
 				'imageGallery' => $post['imageGallery'],
 				'vehicles' => $post['vehicles'],
 			);
-
 			$insertData = $this->gm->insert('tour_package', $tourData);
 			if (!empty($insertData)) {
 				$this->session->set_flashdata('success', '<strong>Well Done...</strong> 👍 Data Updated Successfully.');

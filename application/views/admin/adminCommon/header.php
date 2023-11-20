@@ -13,6 +13,7 @@
   <link rel="shortcut icon" href="<?= base_url(); ?>admin_assets/assets/images/2106778703.jpg">
 
   <!-- App css -->
+  <link href="<?= base_url(); ?>admin_assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
   <link href="<?= base_url(); ?>admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="<?= base_url(); ?>admin_assets/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="<?= base_url(); ?>admin_assets/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
