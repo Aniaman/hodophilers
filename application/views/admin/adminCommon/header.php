@@ -28,6 +28,9 @@
   <link href="<?= base_url(); ?>admin_assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
   <link href="<?= base_url(); ?>admin_assets/plugins/timepicker/bootstrap-material-datetimepicker.css" rel="stylesheet">
 
+  <link href="<?= base_url(); ?>admin_assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+  <link href="<?= base_url(); ?>admin_assets/plugins/animate/animate.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>

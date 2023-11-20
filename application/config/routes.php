@@ -68,7 +68,12 @@ $route['slider-edit'] = 'admin/sliderEditAction';
 $route['packages'] = 'admin/packages';
 $route['package-setup'] = 'admin/packagesAdd';
 $route['package-generate'] = 'admin/packageGenerate';
-//$route['packages-element'] = 'admin/packagesElements';
+$route['package-save'] = 'admin/packageGenerateAction';
+$route['hotel'] = 'admin/hotel';
+$route['hotel-setup'] = 'admin/hotelSetup';
+//hotel edit need to create
+$route['tour-itinerary'] = 'admin/tourItinerary';
+$route['tour-itinerary-setup'] = 'admin/tourItinerarySetup';
 
 //Frontend Routes
 
