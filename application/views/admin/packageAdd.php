@@ -286,7 +286,6 @@
               paymentTermData = paymentTermData + `<option value="${e.itinerary_id}">${e.itineraryTitle}</option>
                 `;
             });
-            paymentTermData = paymentTermData + `<option value="test"> Test</option>`;
             $('#tour-itinerary').html(paymentTermData);
           }
         }
