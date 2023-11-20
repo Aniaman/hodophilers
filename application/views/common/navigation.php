@@ -22,7 +22,7 @@
           <div class="header-social social-links">
             <ul>
               <li><a href="<?= $contactDetails['facebookLink']; ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="<?= $contactDetails['twitterLink']; ?>"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <!-- <li><a href="<?= $contactDetails['twitterLink']; ?>"><i class="fab fa-twitter" aria-hidden="true"></i></a></li> -->
               <li><a href="<?= $contactDetails['instagramLink']; ?>"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
               <li><a href="<?= $contactDetails['linkedinLink']; ?>"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
               <li><a href="<?= $contactDetails['youtubeLink']; ?>"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>

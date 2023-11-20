@@ -19,7 +19,9 @@
         <a href="javascript: void(0);"><i data-feather="map-pin" class="align-self-center menu-icon"></i>Package <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
         <ul class="nav-second-level" aria-expanded="false">
           <li><a href="<?= base_url('destination-setup') ?>"><i class="fas fa-location-arrow"></i>Destination</a></li>
-          <li><a href="<?= base_url('term-policy-setup') ?>"><i class="fas fa-file-contract"></i>Terms & Policy Setup</a></li>
+          <li><a href="<?= base_url('hotel') ?>"><i class="fas fa-file-contract"></i>Hotel</a></li>
+          <li><a href="<?= base_url('tour-itinerary') ?>"><i class="fas fa-file-contract"></i>Tour Itinerary</a></li>
+          <li><a href="<?= base_url('packages') ?>"><i class="fas fa-file-contract"></i>Packages</a></li>
         </ul>
       </li>
     </ul>

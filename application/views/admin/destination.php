@@ -154,7 +154,7 @@
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
                         <a class="dropdown-item document_view" destinationId="<?= $destination['destinationId']; ?>"><i data-feather="edit"></i> Edit</a>
 
-                        <a class="dropdown-item" href="<?= base_url('delete-destination') . $destination['destinationId'] ?>"><i data-feather="trash"></i> Delete</a>
+                        <a class="dropdown-item" href="<?= base_url('delete-destination') . "/" . urlencode(base64_encode($destination['destinationId'])); ?>"><i data-feather="trash"></i> Delete</a>
                       </div>
                     </div>
                   </td>

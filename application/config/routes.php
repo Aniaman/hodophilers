@@ -71,6 +71,15 @@ $route['destination-edit'] = 'admin/destinationEditAction';
 $route['slider-setup'] = 'admin/sliderSetup';
 $route['delete-slider/(:any)'] = 'admin/slidersDelete';
 $route['slider-edit'] = 'admin/sliderEditAction';
+$route['packages'] = 'admin/packages';
+$route['package-setup'] = 'admin/packagesAdd';
+$route['package-generate'] = 'admin/packageGenerate';
+$route['package-save'] = 'admin/packageGenerateAction';
+$route['hotel'] = 'admin/hotel';
+$route['hotel-setup'] = 'admin/hotelSetup';
+//hotel edit need to create
+$route['tour-itinerary'] = 'admin/tourItinerary';
+$route['tour-itinerary-setup'] = 'admin/tourItinerarySetup';
 
 //Users Routes
 $route['user-login'] = 'Login/userLogin';

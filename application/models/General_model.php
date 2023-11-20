@@ -299,21 +299,21 @@ class General_model extends CI_Model
 		return $result;
 	}
 
-	#############Slef Query################
-	public function appointment_with_doctor($table, $condition)
+	#############Self Query################
+	public function itineraryWithDestination($table, $condition)
 	{
 		if (!empty($condition)) {
-			$this->db->select('a.*,d.doctorname');
-			$this->db->join('doctor d', 'd.id=a.doctor', 'full');
+			$this->db->select('a.*,d.*');
+			$this->db->join('destinationdetails d', 'd.destinationId=a.destination');
 			$this->db->where($condition);
-			$q = $this->db->get('appointment a');
+			$q = $this->db->get('itinerary a');
 
 			//echo '<br><br>';
 			return $q->result_array();
 		} else {
-			$this->db->select('a.*,d.doctorname');
-			$this->db->join('doctor d', 'd.id=a.doctor', 'full');
-			$q = $this->db->get('appointment a');
+			$this->db->select('a.*,d.*');
+			$this->db->join('destinationdetails d', 'd.destinationId=a.destination');
+			$q = $this->db->get('itinerary a');
 			// echo $this->db->last_query();
 			// die;
 			return $q->result_array();

@@ -44,6 +44,10 @@
 <script src="<?= base_url(); ?>admin_assets/plugins/datatables/dataTables.responsive.min.js"></script>
 <script src="<?= base_url(); ?>admin_assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
 <script src="<?= base_url(); ?>admin_assets/assets/pages/jquery.datatable.init.js"></script>
+<script src="<?= base_url(); ?>admin_assets/plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+<script src="<?= base_url(); ?>admin_assets/assets/pages/jquery.forms-advanced.js"></script>
+
+<script src="<?= base_url(); ?>admin_assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
 
 <!-- App js -->
 <script src="<?= base_url(); ?>admin_assets/assets/js/app.js"></script>
